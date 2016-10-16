@@ -1,13 +1,26 @@
 extends layout
 
+block css
+    link(href='/css/main.css',rel='stylesheet',type='text/css')
+
 block content
-    img(src='/img/collage.png', alt='', class='collage')
-    div.wrapper
-        div
-            input(type='text',placeholder='Full Name')
-        div
-            input(type='text',placeholder='Favorite Song')
-        div
-            button(title='Add another person') +
-        div
-            input(type='submit',value='Confirm Arrival')
+    div#successMsg.wrapper
+        div Thank you! see you at the wedding.
+        img(src='/img/wedding-rings.png', alt='',width='50',height='50')
+
+    img(id='collage',src='/img/collage.png', alt='', class='collage responsive')
+    div#container.wrapper
+        ul#list
+        div.row
+            div.mandatory *
+            input(id='txtFullName',type='text',placeholder='Full Name')
+            div#error Please fill your full name
+        div.row
+            input(id='txtFavoriteSong',type='text',placeholder='Favorite Song')
+        div.row
+            button(id='addBtn',title='Add another person') + Add Person
+        div.row
+            input(id='submit',type='submit',value='Confirm Arrival')
+
+block js
+    script(src='/js/main.js')
