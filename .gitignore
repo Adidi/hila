@@ -1,0 +1,8 @@
+
+# ignore idea phpstorm directory
+.idea/
+
+# node modules
+node_modules/
+
+*.log

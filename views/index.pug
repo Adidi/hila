@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    img(src='/img/collage.png', alt='', class='collage')
+    div.wrapper
+        div
+            input(type='text',placeholder='Full Name')
+        div
+            input(type='text',placeholder='Favorite Song')
+        div
+            button(title='Add another person') +
+        div
+            input(type='submit',value='Confirm Arrival')
