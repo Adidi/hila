@@ -19,7 +19,7 @@ block content
                             b #{index + 1}.
                         td= guest.fullName
                         td= guest.song
-                        td= moment(guest.createdAt).format('DD.MM.YYYY HH:mm:ss')
+                        td= moment(guest.createdAt).tz("Asia/Jerusalem").format('DD.MM.YYYY HH:mm:ss')
                         td
                             button.btn.btn-default.mt-delete Delete
                             input(type='hidden',value= guest._id)
