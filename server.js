@@ -6,7 +6,11 @@ const path = require('path'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
     routeIndex = require('./routes'),
-    routerPostData = require('./routes/postData');
+    routerPostData = require('./routes/postData'),
+    mongoose = require('mongoose');
+
+
+mongoose.connect('mongodb://localhost/hila');
 
 const app = express();
 

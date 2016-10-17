@@ -1,9 +1,17 @@
 "use strict";
 const express = require('express'),
-    router = express.Router();
+    router = express.Router(),
+    Guest = require('../models/guest');
 
 router.post('/postData', (req, res, next) => {
-    console.log(JSON.parse(req.body.data));
+    const guests = JSON.parse(req.body.data);
+
+    Guest.insertMany(guests, (err,docs) => {
+        if(err){
+            console.log(err);
+        }
+    });
+
     res.json({ done: true });
 });
 
