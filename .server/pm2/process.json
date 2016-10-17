@@ -3,7 +3,7 @@
     {
       "name": "hila",
       "script": "server.js",
-      "cwd": "/root/code/html/hila/www",
+      "cwd": "/root/code/web/hila/www",
       "exec_mode": "cluster",
       "env": {
         "NODE_ENV": "production",
