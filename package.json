@@ -22,8 +22,11 @@
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "moment": "^2.15.1",
     "mongoose": "^4.6.4",
     "pug": "^2.0.0-beta6",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "session-file-store": "^0.2.2"
   }
 }

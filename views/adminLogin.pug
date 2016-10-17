@@ -1,0 +1,9 @@
+extends layoutAdmin
+
+block content
+    form.wrapper(method='post',action='admin')
+        .form-group
+            input.form-control(id='username',type='text', placeholder='Username',name='username')
+        .form-group
+            input.form-control(type='password', placeholder='Password',name='password')
+        button.btn.btn-default(type='submit') Submit

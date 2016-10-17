@@ -1,0 +1,27 @@
+extends layoutAdmin
+
+block content
+    .wrapper-tbl
+        h1 Total Guests:&nbsp;
+            span#total #{guests.length}
+        table#tblList.table.table-striped
+            thead
+                tr
+                    th #
+                    th Full Name
+                    th Song
+                    th Confirmation Date
+                    th Delete
+            tbody
+                each guest, index in guests
+                    tr.mt-row
+                        td
+                            b #{index + 1}.
+                        td= guest.fullName
+                        td= guest.song
+                        td= moment(guest.createdAt).format('DD.MM.YYYY HH:mm:ss')
+                        td
+                            button.btn.btn-default.mt-delete Delete
+                            input(type='hidden',value= guest._id)
+
+
