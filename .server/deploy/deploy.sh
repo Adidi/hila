@@ -2,7 +2,7 @@
 
 BASE_PATH=/root/code/web/hila
 PATH_WT=${BASE_PATH}/wt
-PATH_GIT=${BASE_PATH/git
+PATH_GIT=${BASE_PATH}/git
 PATH_WWW=${BASE_PATH}/www
 PATH_WWW_NEW=${BASE_PATH}/www.new
 PATH_WWW_OLD=${BASE_PATH}/www.old
