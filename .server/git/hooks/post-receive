@@ -1,0 +1,18 @@
+#!/bin/sh
+
+while read oldrev newrev ref
+do
+  branch=$(echo $ref | cut -d/ -f3)
+
+  if [ "master" == "$branch" ]; then
+    # remove any untracked files and directories
+    git --work-tree=../wt  clean -fd
+
+    # force checkout of the latest deploy
+    git --work-tree=../wt checkout --force $branch
+
+
+    #run app
+    #. ../wt/.server/deploy/deploy.sh
+  fi
+done

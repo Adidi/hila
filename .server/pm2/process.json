@@ -1,0 +1,14 @@
+{
+  "apps": [
+    {
+      "name": "hila",
+      "script": "server.js",
+      "cwd": "/root/code/html/hila/www",
+      "exec_mode": "cluster",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 9001
+      }
+    }
+  ]
+}
