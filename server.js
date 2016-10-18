@@ -11,6 +11,7 @@ const path = require('path'),
     routerPostData = require('./routes/postData'),
     routerAdmin = require('./routes/admin');
 
+mongoose.Promise = Promise;
 mongoose.connect('mongodb://localhost/hila');
 
 const app = express();
