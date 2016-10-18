@@ -5,6 +5,8 @@ var MainPage = {
         this.txtFavoriteSong = document.id('txtFavoriteSong');
         this.addBtn = document.id('addBtn');
         this.submit = document.id('submit');
+        //set back diable false cause firefox save the states of components
+        this.submit.set('disabled',false);
         this.error = document.id('error');
         this.list = document.id('list');
         this.container = document.id('container');
@@ -73,10 +75,10 @@ var MainPage = {
             list.push({fullName: fullName, song: song});
         }
 
-        this.okSumbit(list);
+        this.okSubmit(list);
     },
 
-    okSumbit: function(list){
+    okSubmit: function(list){
         this.submit.addClass('send');
         this.submit.set('disabled',true);
         this.container.set('tween',{
