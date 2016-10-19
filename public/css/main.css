@@ -32,10 +32,17 @@ div.row{
 div.mandatory{
     position: absolute;
     top: 8px;
-    right: 8px;
     color: red;
     font-size: 18px;
     font-weight: bold;
+}
+
+.ltr div.mandatory{
+    right: 8px;
+}
+
+.rtl div.mandatory{
+    left: 8px;
 }
 
 div#error{
@@ -131,7 +138,7 @@ input[type="submit"]:hover, button:hover {
 
 .wrapper{
     width: 420px;
-    margin: 20px auto;
+    margin: 40px auto 0 auto;
     position: relative;
     z-index: 10;
 }
@@ -189,4 +196,25 @@ div#successMsg.show{
         bottom: 20px !important;
         top: auto;
     }
+}
+
+div.locale{
+    position: fixed;
+    top: 5px;
+}
+
+.rtl div.locale{
+    left: 5px;
+}
+
+.ltr div.locale{
+    right: 5px;
+}
+
+div.locale a{
+    color: #fff;
+}
+
+div.locale a:hover{
+    color: gray;
 }

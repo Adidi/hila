@@ -14,6 +14,10 @@ body{
     font: 100% 'Roboto',Helvetica, Helvetica neue, Arial, sans-serif;
 }
 
+body.rtl{
+    direction: rtl;
+}
+
 img.responsive {
     width: 100%;
     height: auto;

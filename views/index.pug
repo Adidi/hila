@@ -5,7 +5,7 @@ block css
 
 block content
     div#successMsg
-        div Thank you! see you at the wedding.
+        div #{locale.seeu}
         img(src='/img/wedding-rings.png', alt='',width='50',height='50')
 
     img(id='collage',src='/img/collage.png', alt='', class='collage responsive')
@@ -13,14 +13,19 @@ block content
         ul#list
         div.row
             div.mandatory *
-            input(id='txtFullName',type='text',placeholder='Full Name')
-            div#error Please fill your full name
+            input(id='txtFullName',type='text',placeholder=locale.fullname)
+            div#error #{locale.errmsg}
         div.row
-            input(id='txtFavoriteSong',type='text',placeholder='Favorite Song')
+            input(id='txtFavoriteSong',type='text',placeholder=locale.favsong)
         div.row
-            button(id='addBtn',title='Add another person') + Add Person
+            button(id='addBtn',title='Add another person') #{locale.addperson}
         div.row
-            input(id='submit',type='submit',value='Confirm Arrival')
+            input(id='submit',type='submit',value=locale.confirm)
+    - var urlLocale = '/';
+    - if(clsDir === 'rtl') urlLocale = '/en';
+
+    div.locale
+        a(href=urlLocale) #{locale.locale}
 
 block js
     script(src='/js/main.js')
