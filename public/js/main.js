@@ -104,7 +104,6 @@ var MainPage = {
     }
 };
 
-
-window.addEvent('domready',function(){
+document.addEventListener("DOMContentLoaded", function(event) {
     MainPage.init();
 });

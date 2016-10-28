@@ -34,6 +34,6 @@ var AdminPage = {
     }
 };
 
-window.addEvent('domready',function(){
+document.addEventListener("DOMContentLoaded", function(event) {
     AdminPage.init();
 });
