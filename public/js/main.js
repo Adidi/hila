@@ -32,8 +32,8 @@ var MainPage = {
         }
     },
 
-    validate(){
-        let fullName = this.txtFullName.value.trim();
+    validate: function(){
+        var fullName = this.txtFullName.value.trim();
         if(!fullName){
             this.setError(true);
             return false;
@@ -105,5 +105,7 @@ var MainPage = {
 };
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    MainPage.init();
+    if(document.id('hid-main')){
+        MainPage.init();
+    }
 });

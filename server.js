@@ -20,6 +20,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 //set local moment to use of pug
 app.locals.moment = require('moment-timezone');
+app.locals.isDev = process.env.NODE_ENV !== 'production';
 
 app.use(favicon(path.join(__dirname, 'public','favicon.ico')));
 app.use(bodyParser.json());

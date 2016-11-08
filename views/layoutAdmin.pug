@@ -1,8 +1,7 @@
 extends layout
 
 block css
-    link(href='/css/bootstrap.min.css',rel='stylesheet',type='text/css')
-    link(href='/css/admin.css',rel='stylesheet',type='text/css')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',rel='stylesheet',type='text/css')
 
-block js
-    script(src='/js/admin.js')
+block g
+    input#hid-admin(type='hidden')

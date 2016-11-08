@@ -1,7 +1,7 @@
 
 var AdminPage = {
     init: function(){
-        let inputUserName = document.id('username');
+        var inputUserName = document.id('username');
         if(inputUserName){
             inputUserName.focus();
         }
@@ -16,7 +16,7 @@ var AdminPage = {
         this.tblList.addEvent('click:relay(.mt-delete)', function(event,target){
             if(confirm('Delete Guest ?')){
                 //inside input hidden next to the button
-                let docId = target.getNext().get('value');
+                var docId = target.getNext().get('value');
                 new Request.JSON({
                     url: '/admin',
                     emulation: false, //set emulation false to allow http delete method!
@@ -39,5 +39,7 @@ var AdminPage = {
 };
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    AdminPage.init();
+    if(document.id('hid-admin')) {
+        AdminPage.init();
+    }
 });

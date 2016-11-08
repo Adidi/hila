@@ -1,15 +1,14 @@
 extends layout
 
-block css
-    link(href='/css/main.css',rel='stylesheet',type='text/css')
-
+block g
+    input#hid-main(type='hidden')
 block content
     div#successMsg
         div #{locale.seeu}
         img(src='/img/wedding-rings.png', alt='',width='50',height='50')
 
     img(id='collage',src='/img/collage.png', alt='', class='collage responsive')
-    div#container.wrapper
+    div#container.wrapper-main
         ul#list
         div.row
             div.mandatory *
@@ -26,6 +25,3 @@ block content
 
     div.locale
         a(href=urlLocale) #{locale.locale}
-
-block js
-    script(src='/js/main.js')

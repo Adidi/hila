@@ -11,7 +11,7 @@ html {
 }
 
 body{
-    font: 100% 'Roboto',Helvetica, Helvetica neue, Arial, sans-serif;
+    font-family:  'Roboto',Helvetica, Helvetica neue, Arial, sans-serif;
 }
 
 body.rtl{

@@ -24,16 +24,24 @@ cd ${PATH_WWW_NEW}
 npm prune
 npm install
 
-#make current to old
-mv ${PATH_WWW} ${PATH_WWW_OLD}
+#build resources
+gulp
+if [ $? -ne 0 ]; then
+    cd ${PATH_GIT}
+    git --work-tree=${PATH_WT} reset --hard HEAD~
+    set +x
+    . ${PATH_WT}/.server/deploy/ascii/failed.sh "build failed!";
+fi
 
-#make new to current
-mv ${PATH_WWW_NEW} ${PATH_WWW}
-
-#remove old
-rm -fr ${PATH_WWW_OLD}
+#move content from new to current using rsync(delete the diff from current)
+#adding / after ${PATH_WWW_NEW} is important for rsync!
+rsync -a --delete ${PATH_WWW_NEW}/ ${PATH_WWW}
 
 #reload app
 pm2 reload ${PM2_APP_NAME}
+
+#remove old
+rm -fr ${PATH_WWW_NEW}
+
 set +x
 . ${PATH_WT}/.server/deploy/ascii/success.sh "Complete deploy successfully!"

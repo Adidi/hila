@@ -1,4 +1,4 @@
-body {
+body.rtl, body.ltr {
     background: url(/img/dark_wall.png);
 }
 
@@ -14,7 +14,7 @@ body {
     opacity: 1;
 }
 
-h1 {
+.wrapper-main h1 {
     text-align: center;
     padding: 30px 0 0 0;
     font-size: 25px ;
@@ -66,7 +66,7 @@ div#error.show{
     visibility: visible;
 }
 
-input[type="text"], input[type="email"] {
+.wrapper-main input[type="text"], .wrapper-main input[type="email"] {
     width: 100%;
     padding: 15px 8px;
     border-radius: 5px;
@@ -80,7 +80,7 @@ input[type="text"], input[type="email"] {
     transition: 1s ease;
 }
 
-input[type="submit"] {
+.wrapper-main input[type="submit"] {
     width: 100%;
     padding: 15px;
     border-radius: 5px;
@@ -102,7 +102,7 @@ input[type="submit"] {
     -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.2)));
 }
 
-button {
+.wrapper-main button {
     padding: 5px 10px;
     border-radius: 5px;
     outline: none;
@@ -121,7 +121,7 @@ button {
     cursor: pointer;
 }
 
-input.send {
+.wrapper-main input.send {
     box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.7), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
     background: rgba(0, 0, 0, 0.3);
     -webkit-transition: 1s ease;
@@ -131,12 +131,12 @@ input.send {
     transition: 1s ease;
 }
 
-input[type="submit"]:hover, button:hover {
+.wrapper-main input[type="submit"]:hover, button:hover {
     opacity: 1;
     cursor: pointer;
 }
 
-.wrapper{
+.wrapper-main{
     width: 420px;
     margin: 40px auto 0 auto;
     position: relative;
@@ -183,7 +183,7 @@ div#successMsg.show{
 
 
 @media only screen and (max-width: 650px) {
-    .wrapper{
+    .wrapper-main{
         width: 100%;
         padding: 0 20px;
     }

@@ -5,10 +5,18 @@ html
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         title Hila&Guy's Wedding
         link(href='https://fonts.googleapis.com/css?family=Roboto:400,300',rel='stylesheet',type='text/css')
-        link(href='/css/style.css',rel='stylesheet',type='text/css')
         block css
+        if isDev
+            link(href='/css/style.css',rel='stylesheet',type='text/css')
+            link(href='/css/main.css',rel='stylesheet',type='text/css')
+            link(href='/css/admin.css',rel='stylesheet',type='text/css')
+            script(src='/js/MooTools-Core-1.6.0-compressed.js')
+            script(src='/js/MooTools-More-1.6.0-compressed.js')
+            script(src='/js/main.js')
+            script(src='/js/admin.js')
+        else
+            link(href='/dist/app.css',rel='stylesheet',type='text/css')
+            script(src='/dist/app.js')
     body(class=clsDir)
+        block g
         block content
-    script(src='/js/MooTools-Core-1.6.0-compressed.js')
-    script(src='/js/MooTools-More-1.6.0-compressed.js')
-    block js
