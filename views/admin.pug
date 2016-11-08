@@ -15,8 +15,9 @@ block content
             tbody
                 each guest, index in guests
                     tr.mt-row
-                        td
-                            b #{index + 1}.
+                        td.index
+                            span.mt-index #{index + 1}
+                            span .
                         td= guest.fullName
                         td= guest.song
                         td= moment(guest.createdAt).tz("Asia/Jerusalem").format('DD.MM.YYYY HH:mm:ss')

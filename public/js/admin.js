@@ -29,6 +29,10 @@ var AdminPage = {
                 target.getParent('.mt-row').dispose();
                 //update counter
                 this.total.set('text',Number(this.total.get('text')) - 1);
+                //rearrange all rows numbers
+                this.tblList.getElements('.mt-index').each(function(el, i){
+                    el.set('text', i + 1);
+                });
             }
         }.bind(this));
     }
