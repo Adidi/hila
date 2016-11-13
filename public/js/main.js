@@ -11,11 +11,21 @@ var MainPage = {
         this.list = document.id('list');
         this.container = document.id('container');
         this.collage = document.id('collage');
+        this.collageLarge = document.id('collage-large');
+        this.rsvp = document.id('rsvp');
+        this.rsvpCont = document.id('rsvpCont');
+        this.formaz = document.id('formaz');
         this.successMsg = document.id('successMsg');
 
         this.txtFullName.focus();
         this.addBtn.addEvent('click',this.addNewPerson.bind(this));
         this.submit.addEvent('click',this.clickSubmit.bind(this));
+        this.rsvp.addEvent('click',this.showFormaz.bind(this));
+    },
+
+    showFormaz: function(){
+        this.rsvpCont.addClass('hide');
+        this.formaz.addClass('show');
     },
 
     addNewPerson: function(){
@@ -86,6 +96,7 @@ var MainPage = {
             onComplete: function(){
                 this.successMsg.addClass('show');
                 this.collage.addClass('show');
+                this.collageLarge.addClass('show');
             }.bind(this)
         });
 

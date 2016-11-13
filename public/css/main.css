@@ -29,12 +29,33 @@ div.row{
     position: relative;
 }
 
+#rsvpCont{
+    margin: 0 auto;
+    text-align: center;
+    transition: all .3s;
+    transform: scale(1);
+}
+
+#rsvpCont.hide{
+    transform: scale(0);
+    height: 0;
+}
+
 div.mandatory{
     position: absolute;
     top: 8px;
     color: red;
     font-size: 18px;
     font-weight: bold;
+}
+
+#formaz{
+    transform: scale(0);
+    transition: all .3s;
+}
+
+#formaz.show{
+    transform: scale(1);
 }
 
 .ltr div.mandatory{
@@ -181,20 +202,33 @@ div#successMsg.show{
     opacity: 1;
 }
 
+#collage{
+    display: none;
+}
+
+#collage-large{
+    display: block;
+}
 
 @media only screen and (max-width: 650px) {
     .wrapper-main{
         width: 100%;
         padding: 0 20px;
     }
-
-
 }
 
 @media only screen and (max-width: 800px) {
     div#successMsg {
         bottom: 20px !important;
         top: auto;
+    }
+
+    #collage{
+        display: block;
+    }
+
+    #collage-large{
+        display: none;
     }
 }
 
