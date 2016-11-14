@@ -140,7 +140,7 @@ div#error.show{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
     font-size: 18px;
     color: #000;
-    text-shadow: #000 0 1px 1px;
+    text-shadow: #000 0 1px 10px;
     border: 1px solid #000;
     opacity: 0.7;
     -webkit-box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.7);
@@ -219,6 +219,17 @@ div#successMsg.show{
     display: block;
 }
 
+
+@media only screen and (max-width: 550px) {
+    #collage{
+        display: block;
+    }
+
+    #collage-large{
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 650px) {
     .wrapper-main{
         width: 100%;
@@ -230,14 +241,6 @@ div#successMsg.show{
     div#successMsg {
         bottom: 20px !important;
         top: auto;
-    }
-
-    #collage{
-        display: block;
-    }
-
-    #collage-large{
-        display: none;
     }
 }
 
