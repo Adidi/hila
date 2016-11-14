@@ -25,7 +25,7 @@ npm prune
 npm install
 
 #build resources
-gulp
+npm run build
 if [ $? -ne 0 ]; then
     cd ${PATH_GIT}
     git --work-tree=${PATH_WT} reset --hard HEAD~
