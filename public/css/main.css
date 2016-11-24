@@ -29,11 +29,20 @@ div.row{
     position: relative;
 }
 
+div.row.center{
+    text-align: center;
+}
+
 #rsvpCont{
     margin: 0 auto;
     text-align: center;
     transition: all .3s;
     transform: scale(1);
+}
+
+#rsvpCont > span{
+    top: 200px;
+    position: relative;
 }
 
 #rsvpCont.hide{
@@ -88,6 +97,7 @@ div#error.show{
 }
 
 .wrapper-main input[type="text"], .wrapper-main input[type="email"] {
+    font-family:  'Varela Round';
     width: 100%;
     padding: 15px 8px;
     border-radius: 5px;
@@ -101,32 +111,10 @@ div#error.show{
     transition: 1s ease;
 }
 
-.wrapper-main input[type="submit"] {
-    width: 100%;
-    padding: 15px;
-    border-radius: 5px;
-    outline: none;
-    background: rgba(76,76,76,1);
-    background: -moz-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(76,76,76,1)), color-stop(12%, rgba(89,89,89,1)), color-stop(25%, rgba(102,102,102,1)), color-stop(39%, rgba(71,71,71,1)), color-stop(50%, rgba(44,44,44,1)), color-stop(51%, rgba(0,0,0,1)), color-stop(60%, rgba(17,17,17,1)), color-stop(76%, rgba(43,43,43,1)), color-stop(91%, rgba(28,28,28,1)), color-stop(100%, rgba(19,19,19,1)));
-    background: -webkit-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
-    background: -o-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
-    background: -ms-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
-    background: linear-gradient(to right, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 );
-    font-size: 24px;
-    color: #FFF;
-    text-shadow: #000 0px 1px 5px;
-    border: 1px solid #000;
-    opacity: 0.7;
-    -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.7);
-    -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.7);
-    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.7);
-    border-top: 1px solid rgba(255, 255, 255, 0.8) !important;
-    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.2)));
-}
+
 
 .wrapper-main button {
+    font-family:  'Varela Round';
     padding: 5px 10px;
     border-radius: 5px;
     outline: none;
@@ -147,11 +135,11 @@ div#error.show{
     -moz-box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.7);
     box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.7);
     border-top: 1px solid rgba(255, 255, 255, 0.8) !important;
-    -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.2)));
     cursor: pointer;
 }
 
 .wrapper-main input.send {
+    font-family:  'Varela Round';
     box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.7), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
     background: rgba(0, 0, 0, 0.3);
     -webkit-transition: 1s ease;
@@ -264,3 +252,39 @@ div.locale a{
 div.locale a:hover{
     color: gray;
 }
+.rsvp {
+    background-color: rgba(136, 160, 179, .5);
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    border:2px solid #566963;
+    display:inline-block;
+    cursor:pointer;
+    color:#ded5de;
+    font-size:20px;
+    font-weight:bold;
+    padding:20px 30px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2b665e;
+}
+.rsvp:hover {
+    background-color: rgba(136, 160, 179, .8);
+}
+.rsvp:active {
+    position:relative;
+    top:1px;
+}
+
+.rsvp.submit{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.rsvp.small{
+    display: inline-block;
+    padding: 10px 15px !important;
+    font-size: 16px !important;
+    text-align: center;
+}
+
