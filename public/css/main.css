@@ -223,6 +223,11 @@ div#successMsg.show{
         width: 100%;
         padding: 0 20px;
     }
+
+    #rsvpCont > span{
+        top: 100px;
+    }
+
 }
 
 @media only screen and (max-width: 800px) {
