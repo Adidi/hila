@@ -1,10 +1,10 @@
 {
   "seeu": "Thank you! see you at the wedding!",
-  "errmsg": "Please fill up your full name",
+  "errmsg": "Please insert your full name",
   "fullname": "Full Name",
   "favsong": "The song I want to hear in the wedding",
   "addperson": "+ Add Person",
   "confirm": "Confirm",
-  "rsvp": "For RSVP click here",
+  "rsvp": "RSVP here",
   "locale": "עברית"
 }
